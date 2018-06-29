@@ -1,6 +1,7 @@
 #ifndef REVERSE_H_
 #define REVERSE_H_
 #include <type_traits>
+#include <initializer_list>
 #include <utility>
 #include <iterator>
 
@@ -8,8 +9,9 @@ namespace adapter{
 
 template<typename Cont>
 struct reverse{
-	explicit constexpr reverse(Cont &&c,std::enable_if_t<!std::is_reference_v<Cont>>* = nullptr):container{std::move(c)}{}
-	explicit constexpr reverse(Cont c,std::enable_if_t<std::is_reference_v<Cont>>* = nullptr):container{c}{}
+	static_assert(std::is_reference_v<Cont>||std::is_move_constructible_v<Cont>,"ref or move constructible");
+	explicit constexpr reverse(Cont &&c)
+	:container{std::forward<Cont>(c)}{}
 	Cont container;
 	constexpr auto begin() { return std::rbegin(container);}
 	constexpr auto begin() const { return std::rbegin(container);}

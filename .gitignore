@@ -2,6 +2,7 @@ ReverseAdapter.xml
 .settings
 .metadata
 *Test.xml
+.*.md.html
 # Prerequisites
 *.d
 

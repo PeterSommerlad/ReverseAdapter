@@ -41,7 +41,7 @@
                             							
                             <tool id="cdt.managedbuild.tool.macosx.c.linker.macosx.exe.debug.194976924" name="MacOS X C Linker" superClass="cdt.managedbuild.tool.macosx.c.linker.macosx.exe.debug"/>
                             							
-                            <tool id="cdt.managedbuild.tool.macosx.cpp.linker.macosx.exe.debug.1896961709" name="MacOS X C++ Linker" superClass="cdt.managedbuild.tool.macosx.cpp.linker.macosx.exe.debug">
+                            <tool command="g++" id="cdt.managedbuild.tool.macosx.cpp.linker.macosx.exe.debug.1896961709" name="MacOS X C++ Linker" superClass="cdt.managedbuild.tool.macosx.cpp.linker.macosx.exe.debug">
                                 								
                                 <inputType id="cdt.managedbuild.tool.macosx.cpp.linker.input.181784998" superClass="cdt.managedbuild.tool.macosx.cpp.linker.input">
                                     									
@@ -67,7 +67,7 @@
                             							
                             <tool id="cdt.managedbuild.tool.gnu.archiver.macosx.base.216433363" name="GCC Archiver" superClass="cdt.managedbuild.tool.gnu.archiver.macosx.base"/>
                             							
-                            <tool id="cdt.managedbuild.tool.gnu.cpp.compiler.macosx.exe.debug.75572698" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.macosx.exe.debug">
+                            <tool command="g++" id="cdt.managedbuild.tool.gnu.cpp.compiler.macosx.exe.debug.75572698" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.macosx.exe.debug">
                                 								
                                 <option id="gnu.cpp.compilermacosx.exe.debug.option.optimization.level.438967394" name="Optimization Level" superClass="gnu.cpp.compilermacosx.exe.debug.option.optimization.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.optimization.level.none" valueType="enumerated"/>
                                 								
