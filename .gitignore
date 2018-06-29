@@ -1,3 +1,7 @@
+ReverseAdapter.xml
+.settings
+.metadata
+*Test.xml
 # Prerequisites
 *.d
 
@@ -30,3 +34,4 @@
 *.exe
 *.out
 *.app
+/Debug/
