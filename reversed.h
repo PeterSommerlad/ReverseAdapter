@@ -1,5 +1,5 @@
-#ifndef REVERSE_H_
-#define REVERSE_H_
+#ifndef REVERSED_H_
+#define REVERSED_H_
 #include <type_traits>
 #include <initializer_list>
 #include <utility>
@@ -8,13 +8,13 @@
 namespace adapter{
 
 template<typename Cont>
-struct reverse{
+struct reversed{
 	explicit constexpr
-	reverse(Cont & c)
+	reversed(Cont & c)
 	:container(c){}
 
 	explicit constexpr
-	reverse(std::remove_reference_t<Cont> &&c)
+	reversed(std::remove_reference_t<Cont> &&c)
 	:container(std::move(c)){}
 
 	Cont container;
@@ -24,13 +24,12 @@ struct reverse{
 	constexpr auto end() const { return std::rend(container);}
 };
 template<typename Cont>
-reverse(Cont &) -> reverse<Cont &>;
+reversed(Cont &) -> reversed<Cont &>;
 template<typename Cont>
-reverse(Cont  &&) -> reverse<Cont>;
+reversed(Cont  &&) -> reversed<Cont>;
 template<typename T>
-reverse(std::initializer_list<T>)-> reverse<std::initializer_list<T>>;
-
+reversed(std::initializer_list<T>)-> reversed<std::initializer_list<T>>;
 }
 
 
-#endif /* REVERSE_H_ */
+#endif /* REVERSED_H_ */
