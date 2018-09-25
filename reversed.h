@@ -31,5 +31,4 @@ template<typename T>
 reversed(std::initializer_list<T>)-> reversed<std::initializer_list<T>>;
 }
 
-
 #endif /* REVERSED_H_ */
