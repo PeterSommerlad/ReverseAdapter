@@ -18,10 +18,10 @@ struct reversed{
 	:container(std::move(c)){}
 
 	Cont container;
-	constexpr auto begin() { return std::rbegin(container);}
-	constexpr auto begin() const { return std::rbegin(container);}
-	constexpr auto end() { return std::rend(container);}
-	constexpr auto end() const { return std::rend(container);}
+	constexpr auto begin() & { using std::rbegin; return rbegin(container);}
+	constexpr auto begin() const & { using std::rbegin; return rbegin(container);}
+	constexpr auto end() & { using std::rend; return rend(container);}
+	constexpr auto end() const & { using std::rend; return rend(container);}
 };
 template<typename Cont>
 reversed(Cont &) -> reversed<Cont &>;
